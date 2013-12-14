@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Poem Annotator</title>
+
+
+  <link href="poem/css/ladda.min.css" rel="stylesheet" type="text/css">
+  <link href="poem/css/main.css" rel="stylesheet" type="text/css">
+  <link href="poem/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css">
+  <link href="public/css/jquery.qtip.min.css" rel="stylesheet" type="text/css">
+
+  <!-- js -->
+  <script type="text/javascript" src="public/js/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="poem/js/jquery-ui-1.10.3.custom.js"></script>
+  <script type="text/javascript" src="public/js/jquery.qtip.js"></script>
+  <script type="text/javascript" src="public/js/jquery.color-2.1.0.min.js"></script>
+  <script type="text/javascript" src="public/js/ejs_production.js"></script>
+  <script type="text/javascript" src="poem/js/spin.min.js"></script>
+  <script type="text/javascript" src="poem/js/ladda.min.js"></script>
+  <script type="text/javascript" src="poem/js/utils.js"></script>
+
+</head>
+
+<body>
+  <div class="block">
+    <div class="header">
+        <p id="header">Explicate</p>
+    </div>
+
+    <div class="variable" id="variable">
+        <% include explicate %>
+    </div>
+
+    <div class="footer">
+      <p>Matthew Arbesfeld</p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="poem/js/main.js">
+  </script>
+
+</body>
+</html>
