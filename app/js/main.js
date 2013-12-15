@@ -213,7 +213,7 @@ var l;
 var text = "";
 
 var loadMainPage = function() {
-    var html = new EJS({url: 'poem/templates/explicate.ejs'}).render({text:text});
+    var html = new EJS({url: 'templates/explicate.ejs'}).render({text:text});
     $('#variable').hide().html(html).fadeIn('slow');
     $('#header').hide().text("Explicate").fadeIn('slow');
     pageLoaded();
@@ -246,7 +246,7 @@ var enterFunc = function() {
         cache: false,
         data: { input:text },
         success: function(data) {
-            var html = new EJS({url: 'poem/templates/annotate.ejs'}).render(data);
+            var html = new EJS({url: 'templates/annotate.ejs'}).render(data);
             $('#variable').html(html);
             $('#variable').html(html).fadeIn('slow');
             $('#header').hide().text("Annotate").fadeIn('slow');

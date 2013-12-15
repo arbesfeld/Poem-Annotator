@@ -7,13 +7,8 @@ var WIKI_API = "http://en.wikipedia.org/w/api.php?";
 
 module.exports = function (app) {
 
-  app.get('/poem/search', function(req, res, next) {
+  app.post('/poem/search', function(req, res, next) {
     var string = req.body.string;
-          // action:"query",
-        // prop:"extracts",
-        // exintro:true,
-        // format:"xml",
-        // titles:curAnalysis.urlText
 
     var getWiki = function (string, callback) {
       superAgent.get(WIKI_API)
@@ -64,7 +59,6 @@ module.exports = function (app) {
     var qtips = model.qtips;
     var par1 = model.par1;
     var cbSuccess = function(title, artist, lyrics) {
-   // res.render('poem/poem', { title:title, artist:artist, lyrics:lyrics, qtips:qtips} );
       res.send({title:title, artist:artist, lyrics:lyrics.trim(), qtips:qtips, par1:par1});
     };
 
